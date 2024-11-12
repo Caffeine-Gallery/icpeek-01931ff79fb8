@@ -1,0 +1,10 @@
+type PriceData = 
+ record {
+   price: float64;
+   timestamp: int;
+ };
+service : {
+  addPriceData: (float64) -> ();
+  getPriceHistory: () -> (vec PriceData) query;
+  init: () -> ();
+}
